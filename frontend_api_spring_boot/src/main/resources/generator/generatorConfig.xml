@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<!-- 配置生成器 -->
+<generatorConfiguration>
+    <!-- 配置对象环境 -->
+    <context id="postgres" targetRuntime="MyBatis3">
+
+        <!-- 配置起始与结束标识符 -->
+        <property name="beginningDemiliter" value="`"/>
+        <property name="endingDemiliter" value="`"/>
+
+        <!-- 配置注释生成器 -->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+        <!-- 必须配置的项，连接数据库 -->
+        <jdbcConnection driverClass="org.postgresql.Driver" 
+        connectionURL="jdbc:postgresql://localhost:5432/crm"
+        userId="postgres" 
+        password="116812013"
+        >
+
+                <property name="nullCatalogMeansCurrent" value="true" />
+                <!--
+                <property name="useInformationSchema" value="true" />
+                -->
+        </jdbcConnection>
+
+        <!-- 配置生成的实体类位置 -->
+        <javaModelGenerator targetPackage="com.example.demo.model" targetProject="src\main\java">
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <!-- 配置映射位置 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src\main\resources">
+        </sqlMapGenerator>
+
+        <!-- 配置接口位置 -->
+        <javaClientGenerator targetPackage="com.example.demo.mapper" type="XMLMAPPER" targetProject="src\main\java">
+        </javaClientGenerator>
+
+
+
+        <!-- 配置数据库表 -->
+        <!-- 生成多个表
+        <table schema="public" tableName="custom" modelType="flat"> </table>
+        <table schema="public" tableName="user" modelType="flat"> </table>
+        -->
+        <!-- 生成所有表 -->
+        <table schema="public" tableName="%" 
+               enableCountByExample="true" enableDeleteByExample="true" enableSelectByExample="true"
+               enableUpdateByExample="true" selectByExampleQueryId="true"
+        > 
+        <generatedKey column="id" sqlStatement="JDBC" identity="true"/> 
+        </table>
+
+
+
+
+    </context>
+</generatorConfiguration>

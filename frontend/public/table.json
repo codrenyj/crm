@@ -1,0 +1,40 @@
+{
+    "list": [{
+            "id": 1,
+            "name": "产品1",
+            "money": 123,
+            "creatDate": "2019-11-1",
+            "state": "成功",
+            "date": "2023-11-1",
+            "thumb": "https://lin-xin.gitee.io/images/post/wms.png"
+        },
+        {
+            "id": 2,
+            "name": "产品2",
+            "money": 456,
+            "creatDate": "2019-11-1",
+            "state": "成功",
+            "date": "2023-10-11",
+            "thumb": "https://lin-xin.gitee.io/images/post/node3.png"
+        },
+        {
+            "id": 3,
+            "name": "产品3",
+            "money": 789,
+            "creatDate": "2019-11-1",
+            "state": "失败",
+            "date": "2023-11-11",
+            "thumb": "https://lin-xin.gitee.io/images/post/parcel.png"
+        },
+        {
+            "id": 4,
+            "name": "产品4",
+            "money": 1011,
+            "creatDate": "2019-11-1",
+            "state": "成功",
+            "date": "2019-23-20",
+            "thumb": "https://lin-xin.gitee.io/images/post/notice.png"
+        }
+    ],
+    "pageTotal": 4
+}
